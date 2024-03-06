@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { navData } from "../Data/navData";
+import { navData } from "../../Data/navData";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
 
@@ -41,7 +41,7 @@ const Navbar = () => {
 
       {/* Mobile Nav Items */}
       {navState && (
-        <div className="min-h-screen absolute top-0 left-0 w-full bg-black/90 flex lg:hidden flex-col items-center justify-center gap-6">
+        <div className="z-20 min-h-screen absolute top-0 left-0 w-full bg-black/90 flex lg:hidden flex-col items-center justify-center gap-6">
             <IoMdClose size={28} className="text-white hover:text-red-700 cursor-pointer" onClick={(e) => setNavstate(!navState)}/>
           {navData?.map((item, index) => (
             <Link
