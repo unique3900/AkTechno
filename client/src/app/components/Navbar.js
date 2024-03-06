@@ -15,9 +15,9 @@ const Navbar = () => {
       <div className="">
         <Link href={"/"}>
           <img
-            src="https://optimise2.assets-servd.host/dig-upsiide/production/images/amazz.png?w=735&h=400&q=100&fm=jpg&fit=crop&dm=1651608199&s=3ab01624d5422d48b7fe598d28ddcbcc"
+            src="/bg/logo.png"
             alt="AK Techno"
-            className="w-32 cursor-pointer"
+            className="w-48 cursor-pointer"
           />
         </Link>
       </div>

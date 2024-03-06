@@ -1,8 +1,9 @@
+import Hero from "./components/Hero"
 
 const page = () => {
   return (
     <div className="">
-      <h1 className="text-center font-extrabold text-emerald-500">AK Techno</h1>
+      <Hero/>
       </div>
   )
 }
