@@ -15,7 +15,7 @@ const Ctacounter = () => {
           duration={2.75}
           separator=" "
           className="text-white text-3xl font-bold"
-        />
+       />
       </div>
 
       <div className="flex flex-col gap-2 items-center">

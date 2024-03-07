@@ -25,7 +25,7 @@ const Navbar = () => {
       {/* Desktop Nav Items */}
       <div className="hidden lg:flex flex-row items-center gap-6 text-red-700 font-bold">
         {navData?.map((item, index) => (
-          <Link href={item?.url} className="" key="index">
+          <Link href={item?.url} className="" key={index}>
             {item?.title}
           </Link>
         ))}
@@ -47,7 +47,7 @@ const Navbar = () => {
             <Link
               href={item?.url}
               className="text-white hover:text-red-700"
-              key="index"
+              key={index}
             >
               {item?.title}
             </Link>

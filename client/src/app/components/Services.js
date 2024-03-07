@@ -9,7 +9,7 @@ const Services = () => {
         {serviceData?.map((item, index) => (
           <div
             className="shadow-lg px-3 py-6 rounded-md flex flex-col gap-4 items-center hover:-translate-y-2 w-96 transition-all ease-in-out duration-300" 
-            key={index}
+            key={item.id}
           >
             <img
               src={item.image}
