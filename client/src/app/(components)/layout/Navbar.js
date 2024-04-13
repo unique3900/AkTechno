@@ -6,9 +6,12 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
 
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [navState, setNavstate] = useState(false);
+  const navPage=usePathname();
+  const currentPage=navPage.slice(1,navPage.length)
   return (
     <div className="w-full flex gap-4 justify-between items-center px-10 py-6">
       {/* Logo */}
@@ -23,9 +26,9 @@ const Navbar = () => {
       </div>
 
       {/* Desktop Nav Items */}
-      <div className="hidden lg:flex flex-row items-center gap-6 text-red-700 font-bold">
+      <div className="hidden lg:flex flex-row items-center gap-6 font-bold">
         {navData?.map((item, index) => (
-          <Link  href={item?.url} className="" key={index}>
+          <Link href={item?.url} className={`${item.url.slice(1,item.url.length)==currentPage||item.url==" "?'text-red-600':'text-black'}  hover:text-red-600 `} key={index}>
             {item?.title}
           </Link>
         ))}
@@ -42,10 +45,14 @@ const Navbar = () => {
       {/* Mobile Nav Items */}
       {navState && (
         <div className="z-20 min-h-screen absolute top-0 left-0 w-full bg-black/90 flex lg:hidden flex-col items-center justify-center gap-6">
-            <IoMdClose size={28} className="text-white hover:text-red-700 cursor-pointer" onClick={(e) => setNavstate(!navState)}/>
+          <IoMdClose
+            size={28}
+            className="text-white hover:text-red-700 cursor-pointer"
+            onClick={(e) => setNavstate(!navState)}
+          />
           {navData?.map((item, index) => (
             <Link
-              onClick={()=>setNavstate(!navState)}
+              onClick={() => setNavstate(!navState)}
               href={item?.url}
               className="text-white hover:text-red-700"
               key={index}
@@ -55,6 +62,8 @@ const Navbar = () => {
           ))}
         </div>
       )}
+
+      <Link href={"/"} className="px-3 py-2 bg-red-600  text-white cursor-pointer rounded-md hover:bg-black transition-colors ease-in-out duration-300" >Login</Link>
     </div>
   );
 };

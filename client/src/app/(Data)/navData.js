@@ -5,19 +5,9 @@ export const navData=[
         url:'/'
     },
     {
-        id:2,
-        title:'Services',
-        url:'/services'
-    },
-    {
         id:3,
         title:'Shop',
         url:'/shop'
-    },
-    {
-        id:4,
-        title:'Career',
-        url:'/career'
     },
     {
         id:5,

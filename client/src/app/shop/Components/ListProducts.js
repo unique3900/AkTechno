@@ -17,7 +17,7 @@ const ListProducts = () => {
   return (
     <div className="flex flex-row flex-wrap items-center justify-around gap-4 px-6 mt-6">
         {products?.map((item,index)=>(
-            <div className="flex flex-col gap-4 w-[27rem] shadow-md rounded-md p-4">
+            <div key={index} className="flex flex-col gap-4 w-[27rem] shadow-md rounded-md p-4">
               <img src={item.thumbnail} alt={item.title} className="h-[18rem] object-cover"/>
               <h3 className="text-2xl font-bold text-center">{item.title}</h3>
               <p className="">{item.description.slice(0,40)+"...."}</p>

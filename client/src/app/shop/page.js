@@ -5,7 +5,9 @@ import {  fetchAllProductsAsync, selectProducts } from "../Redux/Product/Product
 import { store } from "../Redux/store";
 import ListProducts from "./Components/ListProducts";
 
+
 const page = () => {
+  // throw new Error("Ohhh")  //For testing
     const dispatch=useDispatch();
     const product=useSelector(selectProducts)
 

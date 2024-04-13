@@ -10,7 +10,7 @@ import Ctacounter from "./(components)/Ctacounter";
 
 const page = () => {
   return (
-    <div className="">
+    <div className="px-20">
       <Provider store={store}>
         <Hero />
         <Services />
