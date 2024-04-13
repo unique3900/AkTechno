@@ -1,9 +1,9 @@
-import { teamData } from "../Data/teamData";
+import { teamData } from "../(Data)/teamData";
 
 
 const Team = () => {
   return (
-    <div className="px-6 py-6 lg:py-0 min-h-screen flex flex-col gap-4 items-center justify-center mt-10 lg:-mt-10 bg-gradient-to-tr from-red-400 to-red-600">
+    <div className="px-6 py-6 lg:py-0 min-h-screen flex flex-col gap-4 items-center justify-center mt-24 lg:mt-10 bg-gradient-to-tr from-red-400 to-red-600">
        <h2 className="text-4xl leading-10 mt-10 text-center font-bold text-white ">Our Team</h2>
       <p className="text-center text-white leading-7">Meet our highly dedicated team members</p>
 

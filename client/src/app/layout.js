@@ -1,8 +1,8 @@
 
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/layout/Navbar";
-import Footer from "./components/layout/Footer";
+import Navbar from "./(components)/layout/Navbar";
+import Footer from "./(components)/layout/Footer";
 import { Provider } from "react-redux";
 import { store } from "./Redux/store";
 

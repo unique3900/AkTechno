@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { navData } from "../../Data/navData";
+import { navData } from "../../(Data)/navData";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
 
@@ -25,7 +25,7 @@ const Navbar = () => {
       {/* Desktop Nav Items */}
       <div className="hidden lg:flex flex-row items-center gap-6 text-red-700 font-bold">
         {navData?.map((item, index) => (
-          <Link href={item?.url} className="" key={index}>
+          <Link  href={item?.url} className="" key={index}>
             {item?.title}
           </Link>
         ))}
@@ -45,6 +45,7 @@ const Navbar = () => {
             <IoMdClose size={28} className="text-white hover:text-red-700 cursor-pointer" onClick={(e) => setNavstate(!navState)}/>
           {navData?.map((item, index) => (
             <Link
+              onClick={()=>setNavstate(!navState)}
               href={item?.url}
               className="text-white hover:text-red-700"
               key={index}

@@ -6,7 +6,7 @@ import { FaOpencart ,FaRegFaceSmile} from "react-icons/fa6";
 
 const Ctacounter = () => {
   return (
-    <div className="flex justify-around gap-4 items-center">
+    <div className="flex justify-around gap-4 items-center  w-11/12 mx-auto py-4 px-6  bg-gradient-to-tr from-red-400 to-red-600 rounded-md shadow-lg">
       <div className="flex flex-col gap-2 items-center">
         <span className="text-2xl lg:text-3xl font-bold text-white flex items-center gap-2"><span className="hidden lg:flex"><FaUserFriends size={34}/></span>Clients</span>
         <CountUp
