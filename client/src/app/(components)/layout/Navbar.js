@@ -5,15 +5,32 @@ import { navData } from "../../(Data)/navData";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [navState, setNavstate] = useState(false);
   const navPage=usePathname();
   const currentPage=navPage.slice(1,navPage.length)
-  return (
-    <div className="w-full flex gap-4 justify-between items-center px-10 py-6">
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+  return ( 
+    <div className={` z-50 ${scrolled?'fixed shadow-md bg-white':'bg-transparent'}  w-full flex gap-4 justify-between items-center px-10 py-6`}>
       {/* Logo */}
       <div className="">
         <Link href={"/"}>
